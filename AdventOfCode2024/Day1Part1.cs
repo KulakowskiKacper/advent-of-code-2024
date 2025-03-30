@@ -9,7 +9,6 @@ namespace AdventOfCode2024
     {
         DayOneFileData fileData = new();
 
-        //Parse data with Split() method. String we are spliting is "   ", string on the left goes to list values1, string on the right goes to list values2
         public Day1Part1()
         {
             DisplayResult();

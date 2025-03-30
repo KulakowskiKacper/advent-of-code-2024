@@ -15,7 +15,7 @@ namespace AdventOfCode2024
 
         public List<int> valuesLeft = new();
         public List<int> valuesRight = new();
-
+        //Parse data with Split() method. String we are spliting is "   ", string on the left goes to list values1, string on the right goes to list values2
         public void ParseData()
         {
             foreach(var value in fileData)
