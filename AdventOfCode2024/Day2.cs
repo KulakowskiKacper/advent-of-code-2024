@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2024
 {
-    public class Day2
+    public class Day1Part2
     {
-        readonly FileData fileData = new();
+        readonly DayOneFileData fileData = new();
         private int similarityScore = 0;
 
-        public Day2()
+        public Day1Part2()
         {
             DisplayResult();
         }

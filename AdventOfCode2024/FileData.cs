@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2024
 {
-    public class FileData
+    public class DayOneFileData
     {
-        public FileData()
+        public DayOneFileData()
         {
             ParseData();
         }
