@@ -36,7 +36,6 @@ namespace AdventOfCode2024
         }
         protected virtual void DisplayResult()
         {
-            //ParseData();
             CalculateDistance();
             Console.WriteLine(distance);
         }

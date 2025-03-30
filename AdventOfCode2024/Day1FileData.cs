@@ -7,14 +7,16 @@ namespace AdventOfCode2024
 {
     public class DayOneFileData
     {
+        //Variable to hold data from file
+        public string[] fileData = File.ReadAllLines("C:\\Users\\Kacper\\Desktop\\C#\\AdventOfCode2024\\DayOneData.txt");
+        //Lists to hold parsed data
+        public List<int> valuesLeft = new();
+        public List<int> valuesRight = new();
         public DayOneFileData()
         {
             ParseData();
         }
-        public string[] fileData = File.ReadAllLines("C:\\Users\\Kacper\\Desktop\\C#\\AdventOfCode2024\\DayOneData.txt");
 
-        public List<int> valuesLeft = new();
-        public List<int> valuesRight = new();
         //Parse data with Split() method. String we are spliting is "   ", string on the left goes to list values1, string on the right goes to list values2
         public void ParseData()
         {
