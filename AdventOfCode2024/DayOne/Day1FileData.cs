@@ -8,7 +8,7 @@ namespace AdventOfCode2024
     public class DayOneFileData
     {
         //Variable to hold data from file
-        public string[] fileData = File.ReadAllLines("C:\\Users\\Kacper\\Desktop\\C#\\AdventOfCode2024\\DayOneData.txt");
+        public string[] fileData = File.ReadAllLines("C:\\Users\\Kacper\\Desktop\\C#\\AdventOfCode2024\\DataFiles\\DayOneData.txt");
         //Lists to hold parsed data
         public List<int> valuesLeft = new();
         public List<int> valuesRight = new();
