@@ -6,5 +6,7 @@ internal class Program
     {
         Day1 day1 = new();
         //1580061
+        Day2 day2 = new();
+        //23046913
     }
 }

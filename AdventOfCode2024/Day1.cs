@@ -7,11 +7,12 @@ namespace AdventOfCode2024
 {
     public class Day1
     {
+        FileData fileData = new FileData();
         //Read pairs of data into string array. Every index is "12345   12345"
-        string[] values = File.ReadAllLines("C:\\Users\\Kacper\\Desktop\\C#\\AdventOfCode2024\\DayOneData.txt");
-        //Create Lists to hold parsed data
-        List<int> values1 = new();
-        List<int> values2 = new();
+        // string[] values = FileData.fileData;
+        // //Create Lists to hold parsed data
+        // protected List<int> valuesLeft = new();
+        // protected List<int> valuesRight = new();
         //Parse data with Split() method. String we are spliting is "   ", string on the left goes to list values1, string on the right goes to list values2
         public Day1()
         {
@@ -22,33 +23,33 @@ namespace AdventOfCode2024
         int distance = 0;
         int minValue1;
         int minValue2;
-        private void ParseData()
-        {
-            foreach(var value in values)
-            {
-                values1.Add(Convert.ToInt32(value.Split("   ", StringSplitOptions.None)[0]));
-                values2.Add(Convert.ToInt32(value.Split("   ", StringSplitOptions.None)[1]));
-            }
-        }
+        // protected virtual void ParseData()
+        // {
+        //     foreach(var value in values)
+        //     {
+        //         valuesLeft.Add(Convert.ToInt32(value.Split("   ", StringSplitOptions.None)[0]));
+        //         valuesRight.Add(Convert.ToInt32(value.Split("   ", StringSplitOptions.None)[1]));
+        //     }
+        // }
 
-        private void CalculateDistance()
+        protected virtual void CalculateDistance()
         {
             //Start loop, which goes until list is empty
-            while(values1.Count > 0)
+            while(fileData.valuesLeft.Count > 0)
             {
                 //Assign minimal values of both lists to respective variable
-                minValue1 = values1.Min();
-                minValue2 = values2.Min();
+                minValue1 = fileData.valuesLeft.Min();
+                minValue2 = fileData.valuesRight.Min();
                 //Calculate absolute value of subtraction of both values. Absolute, because may happen that value2 is higher than value1, which would go to negative number
                 distance += Math.Abs(minValue1 - minValue2);
                 //Remove calculated values from both of Lists
-                values1.Remove(values1.Min());
-                values2.Remove(values2.Min());
+                fileData.valuesLeft.Remove(fileData.valuesLeft.Min());
+                fileData.valuesRight.Remove(fileData.valuesRight.Min());
             }
         }
-        private void DisplayResult()
+        protected virtual void DisplayResult()
         {
-            ParseData();
+            //ParseData();
             CalculateDistance();
             Console.WriteLine(distance);
         }
